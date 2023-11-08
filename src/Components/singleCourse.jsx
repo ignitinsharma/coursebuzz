@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const SingleCourse = () => {
   const { id } = useParams();
@@ -19,7 +19,9 @@ const SingleCourse = () => {
   return (
     <>
       <div className="flex justify-center w-full mx-auto h-auto py-8 bg-black">
-        <h2 className="text-[white] font-medium text-[1.4rem]">CourseBuzz</h2>
+        <Link to={`/`}>
+          <h2 className="text-[white] font-medium text-[1.4rem]">CourseBuzz</h2>
+        </Link>
       </div>
       <div className="block p-2 md:flex">
         <div className="w-[98%]  md:w-[65%]">
